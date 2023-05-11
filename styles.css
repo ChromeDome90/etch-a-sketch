@@ -10,10 +10,23 @@
     font-size: 1rem;
 }
 
-/* styling */
+/* HEADER */
+.header {
+  font-size: 3rem;
+  font-weight: 700;
+}
 
-/* Id styling */
+/* MAIN */
+body {
+  color: #CCDAD1;
+  background-color: #1f1f1f;
+}
 
-/* Class styling */
-
+/* FOOTER */
+.footer {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
 
