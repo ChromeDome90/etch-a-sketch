@@ -8,17 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
-<header class="header">Etch-A-Sketch</header>
+<header class="header">
+    <h1>Etch-A-Sketch</h1>
+    <h2 id="subheaderMsg" class="subheader">
+        Click and drag to draw a masterpiece!
+    </h2>
+</header>
 <body>
     <main class="main">
         <div class="settings">
             <input id="color Picker" type="color" value="#000" />
+            <button id="colorBtn">Color</button>
+            <button id="rainbowBtn">Rainbow</button>
+            <button id="eraserBtn">Eraser</button>
+            <button id="resetBtn">Reset</button>
         </div>
-        <canvas class="canvas-container"></canvas>
+        <canvas id="grid" class="canvas-container"></canvas>
     </main>
     <footer class="footer">
         <p>Copyright ©
             <script>document.write(new Date().getFullYear())</script> 
+            ChromeDome90
         </p>
     </footer>
 </body>
