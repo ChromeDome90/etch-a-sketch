@@ -10,7 +10,7 @@
     font-size: 1rem;
 }
 
-/* HEADER */
+/* Header ***************************/
 .header {
   position: absolute;
 
@@ -32,10 +32,10 @@
 }
 
 
-/* MAIN */
+/* Main  ******************************/
 body {
-  color: #CCDAD1;
-  background-color: #1f1f1f;
+  color: #172121;
+  background-color: #CCDAD1;
 }
 
 .main {
@@ -45,6 +45,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Settings styles *************************/
 
 .settings {
   display: flex;
@@ -58,13 +60,9 @@ button {
   align-items: center;
 }
 
-.settings > button:nth-child(5) {
-  border-radius: 0 20px 20px 0;
-}
-
 input[type='color']:hover {
   cursor: pointer;
-  transform: scale(1.07);
+  transform: scale(1.03);
 }
 
 input[type='color']:active {
@@ -74,20 +72,22 @@ input[type='color']:active {
 
 input[type='color'] {
   -webkit-appearance: none;
-  width: 100px;
+  width: 60px;
   height: 60px;
   border: none;
   background: none;
+  margin-right: 5px;
 }
 
 input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
+  background: none;
 }
 
 input[type='color']::-webkit-color-swatch {
   border: none;
-  border-radius: 20px 0 0 20px;
-  box-shadow: rgba(255, 255, 255, 0.07) 0px 5px 10px;
+  border-radius: 18%;
+  background: none;
 }
 
 button {
@@ -103,13 +103,26 @@ button {
 button:hover {
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
-  transform: scale(1.07);
+  transform: scale(1.03);
+  border-radius: 5px;
 }
 
 button:active {
-  transition: transform 0.05s ease-in-out;
+  transition: transform 0.01s ease-in-out;
   transform: scale(1);
 }
+
+button:hover:nth-child(n + 1) {
+  box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.5),
+  3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:active:nth-child(n + 1) {
+  box-shadow: inset -3px -5px 8px rgba(255, 255, 255, 0.5),
+  inset 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Canvas styles ***************************/
 
 .canvas-container {
   height: 100vh;
@@ -125,7 +138,6 @@ button:active {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px;
 }
 
 .footer > p {
