@@ -57,6 +57,7 @@ body {
   3px 3px 5px rgba(0, 0, 0, 0.23);
   padding: 15px 20px;
   border-radius: 10px;
+  z-index: 1000
 }
 
 .settings,
@@ -114,8 +115,15 @@ input[type="range"]:hover {
 }
 
 .slider-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 22px 0px 5px 0px
 }
+
+/* .slider-size {
+  padding: 22px 0px 5px 0px
+} */
 
 button {
   display: flex;
@@ -151,9 +159,16 @@ button:active:nth-child(n + 1) {
 
 /* Canvas styles ***************************/
 
-.canvas-container {
+.canvas-grid {
+  cursor: crosshair;
+  display: grid;
   height: 100vh;
   width: 100vw;
+  z-index: 999;
+}
+
+.grid-element {
+  user-select: none;
 }
 
 
