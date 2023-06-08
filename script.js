@@ -24,6 +24,7 @@ function setCurrentSize(newSize) {
     currentSize = newSize
 }
 
+let showColor = document.getElementById('colorPicker')
 const colorPicker = document.getElementById('colorPicker')
 const colorBtn = document.getElementById('colorBtn')
 const rainbowBtn = document.getElementById('rainbowBtn')
@@ -34,6 +35,7 @@ const grid = document.getElementById('grid')
 
 // Settings to change drawing style and erase canvas
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+showColor.addEventListener('input', () => { showColor.style.backgroundColor = colorPicker.value })
 colorBtn.onclick = () => setCurrentMode('color')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
 eraserBtn.onclick = () => setCurrentMode('eraser')
@@ -43,8 +45,8 @@ sizeSlider.onchange = (e) => changeCanvasSize(e.target.value)
 
 // Allows user to click and drag to draw
 let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+grid.onmousedown = () => (mouseDown = true)
+grid.onmouseup = () => (mouseDown = false)
 
 function changeCanvasSize(value) {
     setCurrentSize(value)
@@ -53,7 +55,7 @@ function changeCanvasSize(value) {
 }
 
 function updateSizeValue(value) {
-    sizeValue.innerHTML = `${value} x ${value}`
+  sizeValue.innerHTML = `${value} x ${value}`
 }
 
 function resetGrid() {
